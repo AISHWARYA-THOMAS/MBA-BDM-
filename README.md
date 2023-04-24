@@ -25,7 +25,7 @@ ENTITIES:
 
 ATTRIBUTES:
 
-Customer Table:
+Customer Table:\
 •	Customer_ID (Primary Key)
 •	Customer_Name
 •	Contact_Info
