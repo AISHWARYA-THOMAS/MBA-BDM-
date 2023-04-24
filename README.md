@@ -3,6 +3,7 @@ Aishwarya Thomas - 22121005
 
 Richy Duke - 22121038
 
+INTRODUCTION:
 
 ENTITIES:
 1.	Customer
@@ -15,3 +16,6 @@ ENTITIES:
 8.	ATM
 9.	Currency
 10.	Investment
+
+
+ATTRIBUTES:
