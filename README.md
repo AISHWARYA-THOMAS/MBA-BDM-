@@ -24,3 +24,40 @@ ENTITIES:
 
 
 ATTRIBUTES:
+
+Customer Table:
+•	Customer_ID (Primary Key)
+•	Customer_Name
+•	Contact_Info
+•	Account_Number (Foreign Key)
+
+Account Table:
+•	Account_Number (Primary Key)
+•	Account_Type
+•	Balance
+•	Status
+•	Customer_ID (Foreign Key)
+
+Transaction Table:
+•	Transaction_ID (Primary Key)
+•	Transaction_Type
+•	Amount
+•	Date
+•	Time
+•	Location
+•	Account_Number (Foreign Key)
+
+Branch Table:
+•	Branch_ID (Primary Key)
+•	Branch_Name
+•	Address
+•	Contact_Info
+
+Employee Table:
+•	Employee_ID (Primary Key)
+•	Employee_Name
+•	Contact_Info
+•	Position
+•	Salary
+• Branch_ID (Foreign Key)
+
