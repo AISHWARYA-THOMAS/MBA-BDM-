@@ -25,39 +25,86 @@ ENTITIES:
 
 ATTRIBUTES:
 
-Customer Table:\
-•	Customer_ID (Primary Key)/
-•	Customer_Name/
-•	Contact_Info/
-•	Account_Number (Foreign Key)/
+Customer Table:
 
-Account Table:/
-•	Account_Number (Primary Key)/
-•	Account_Type/
-•	Balance/
-•	Status/
-•	Customer_ID (Foreign Key)/
+•	Customer_ID (Primary Key)
+•	Customer_Name
+•	Contact_Info
+•	Account_Number (Foreign Key)
 
-Transaction Table:/
-•	Transaction_ID (Primary Key)/
-•	Transaction_Type/
-•	Amount/
-•	Date/
-•	Time/
-•	Location/
-•	Account_Number (Foreign Key)/
+Account Table:
 
-Branch Table:/
-•	Branch_ID (Primary Key)/
-•	Branch_Name/
-•	Address/
-•	Contact_Info/
+•	Account_Number (Primary Key)
+•	Account_Type
+•	Balance
+•	Status
+•	Customer_ID (Foreign Key)
 
-Employee Table:/
-•	Employee_ID (Primary Key)/
-•	Employee_Name/
-•	Contact_Info/
-•	Position/
-•	Salary/
-• Branch_ID (Foreign Key)/
+Transaction Table:
+
+•	Transaction_ID (Primary Key)
+•	Transaction_Type
+•	Amount
+•	Date
+•	Time
+•	Location
+•	Account_Number (Foreign Key)
+
+Branch Table:
+
+•	Branch_ID (Primary Key)
+•	Branch_Name
+•	Address
+•	Contact_Info
+
+Employee Table:
+
+•	Employee_ID (Primary Key)
+•	Employee_Name
+•	Contact_Info
+•	Position
+•	Salary
+• Branch_ID (Foreign Key)
+
+Loan Table:
+
+•	Loan_ID (Primary Key)
+•	Loan_Type
+•	Loan_Amount
+•	Interest_Rate
+•	Term
+•	Status
+•	Customer_ID (Foreign Key)
+
+Credit_Card Table:
+
+•	Card_Number (Primary Key)
+•	Card_Type
+•	Credit_Limit
+•	Balance
+•	Status
+•	Customer_ID (Foreign Key)
+
+ATM Table:
+
+•	ATM_ID (Primary Key)
+•	Location
+•	Status
+•	Branch_ID (Foreign Key)
+
+Currency Table:
+
+•	Currency_Type (Primary Key)
+•	Exchange_Rate
+•	Status
+
+Investment Table:
+
+•	Investment_ID (Primary Key)
+•	Investment_Type
+•	Investment_Amount
+•	Interest_Rate
+•	Term
+•	Status
+•	Customer_ID (Foreign Key)
 
