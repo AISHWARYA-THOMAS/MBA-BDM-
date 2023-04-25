@@ -133,41 +133,6 @@ Investment Table:
 |--------:| -------- |:-----------------------:| -------------:|
 |0002 | Pune   | 16 chun chowk ,Kedanaha  | 2446413       |
 
-#Employee
-| Employee ID |  Employee Name |  Contact Info |  Position |  Salary |  Branch ID |
-|--------------:| -------------------|:----------:| ------:|-------:|-----:|
-| 22121008 |  Lalettan |  8940073646 |  Accountant |  120000 |  0006 |
-| 22212289 |  Kajalesh |  8976543428 |  Cashier |  45000 |  0006 |
-
-#Loan
-|  Loan ID  | Loan Type | Loan Amount | Interest Rate | Term | Status | Customer ID |
-|-----------:| ----------- |:---------------:| --------------:|-------:|-------:|--------------:|
-|  9166  | Home | 130000| 10% | 48 months | paid | 9002 |
-|  8233  | Gold | 50000 | 15% | 18 months | pending | 9007 |
-
-#Credit
-| Card Number  | Card Type | Credit Limit | Balance | Status | Customer ID |
-|--------------:| -------------------|:----------:| ------:|-------:|-----:|
-| 42222229876006  | Debit | - | 600000 | Active | 9006 |
-| 42222654756786 | Credit | 100000 | Active | 9005 |
-
-#ATM
-| ATM ID | Location | Status | Branch ID |
-| ------:|-------:|-----:|---:|
-|5858 | Swargat 2 | Offline | 0009 |
-| ATM ID | Bandra | Active | 0005 |
-
-#Currency
-| Currency Type  | Exchange Rate | Status |
-|-------:|-----:|-----:|
-| Rupee  | 61.4| Rise |
-| Rupee  | 61.4 | Rise |
-
-#Investment
-|  Investment ID  | Investment Type | Investment Amount | Interest Rate | Term | Status | Customer ID |
-|------------------:| -------------------|:-----------------:|----------:|--------------:|-----------:|---------------------:|
-|  23361  | Bonds | 10000 | 15% | 18 months | Completed | 9026 |
-|  26223  | Fixed Deposit | 10000 | 10% | 48 Months | On-going | 9006 |
 
 
 
