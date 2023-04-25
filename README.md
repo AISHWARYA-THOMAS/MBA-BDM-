@@ -116,25 +116,25 @@ ER DIAGRAM - BANKING SECTOR
 
 
 
-#Customer
+#TABLE: Customer
 | Customer ID  | Customer Name       | Contact Info  | Account Number  |  
 |---------------:|------------------------|:--------------:| --------------------:|
 |  9001             |  Aishwarya Thomas   |  7638926678 |  160022221111    |    
 |  9002             |  Sanskar Gaur            |  8970095674 |  160022221021    |    
 
-#Account
+#TABLE: Account
 |  Account Number  |  Account Type |  Balance                            |  Status | Customer ID     | 
 |---------------------:|-----------------|:----------------------------:|--------:|-----------------:|
 |  160022221024  |  Savings              |  1200456                           |  Open  | 9003     | 
 |  160022221021  |  Mutual               |  78900                               |  Closed | 9008 | 
 
-#Transaction
+#TABLE: Transaction
 |  Transaction ID  |  Transaction Type |  Amount |  Date |  Time |  Location |  Account Number |
 |------------------:| -------------------|:----------:| ------:|-------:|-----------:|---------------------:|
 |  888234             |  Cash |  10000 |  12/01/2023 |  09:22:45 |  Pune |  160022221021 |
 |  888999  |  UPI |  500 |  03/02/2023 |  04:49:48 |  Chennai |  160022221771 |
 
-#Branch
+#TABLE: Branch
 |  Branch ID |  Branch Name |  Address |  Contact Info|
 |--------:| -------- |:-----------------------:| -------------:|
 |0002 | Pune   | 16 chun chowk ,Kedanaha  | 2446413       |
