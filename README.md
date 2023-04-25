@@ -128,8 +128,10 @@ Investment Table:
 |  888234             |  Cash |  10000 |  12/01/2023 |  09:22:45 |  Pune |  160022221021 |
 |  888999  |  UPI |  500 |  03/02/2023 |  04:49:48 |  Chennai |  160022221771 |
 
-
-
+#Branch
+|  Branch ID |  Branch Name |  Address |  Contact Info|
+|--------:| -------- |:-----------------------:| -------------:|
+|0002 | Pune   | 16 chun chowk ,Kedanaha  | 2446413       |
 
 
 
