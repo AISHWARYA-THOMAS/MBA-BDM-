@@ -122,6 +122,12 @@ Investment Table:
 |  160022221024  |  Savings              |  1200456                           |  Open  | 9003     | 
 |  160022221021  |  Mutual               |  78900                               |  Closed | 9008 | 
 
+#Transaction
+|  Transaction ID  |  Transaction Type |  Amount |  Date |  Time |  Location |  Account Number |
+|------------------:| -------------------|:----------:| ------:|-------:|-----------:|---------------------:|
+|  888234             |  Cash |  10000 |  12/01/2023 |  09:22:45 |  Pune |  160022221021 |
+|  888999  |  Credit |  500 |  03/02/2023 |  04:49:48 |  Chennai |  160022221771 |
+
 
 
 
