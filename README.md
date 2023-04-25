@@ -111,8 +111,7 @@ Investment Table:
 ER DIAGRAM - BANKING SECTOR
 
 
-![BDM-CIA1 drawio (1)](https://user-images.githubusercontent.com/125997499/234367176-ee34c7ac-5c07-495d-9a6b-b49597b8e9c4.png)
-
+![BDM-CIA1 drawio (2)](https://user-images.githubusercontent.com/125997499/234368584-bd56e22e-7369-43eb-89b8-858f41d784e1.png)
 
 
 #TABLE: CUSTOMER
