@@ -7,7 +7,7 @@ DOMAIN NAME: BANKING SECTOR
 
 INTRODUCTION:
 
-As  Business Analysts for the banking sector,We have designed a database structure for a banking application.The database must handle enormous amount of data securely also efficiently and provide a smooth experience overall with accurate and timely information to customers.Therefore, in this task, we have identified several significant entities and attributes that are deemed to be essential for designing the  structure for this domain and using which I have created an ER diagram and coverted to table to manage data effectively.
+As  Business Analysts for the banking sector,We have designed a database structure for a banking application.The database must handle enormous amount of data securely also efficiently and provide a smooth experience overall with accurate and timely information to customers.Therefore, in this task, we have identified several significant entities and attributes that are deemed to be essential for designing the  structure for this domain and using which we have created an ER diagram and coverted to table to manage data effectively.
 
 
 ENTITIES:
