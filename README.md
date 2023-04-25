@@ -119,11 +119,7 @@ ER DIAGRAM - BANKING SECTOR
 ![BDM-CIA1 drawio (2)](https://user-images.githubusercontent.com/125997499/234368584-bd56e22e-7369-43eb-89b8-858f41d784e1.png)
 
 
-#TABLE: CUSTOMER
-| Customer ID  | Customer Name       | Contact Info  | Account Number  |  
-|---------------:|------------------------|:--------------:| --------------------:|
-|  9001             |  Aishwarya Thomas   |  7638926678 |  160022221111    |    
-|  9002             |  Sanskar Gaur            |  8970095674 |  160022221021    |    
+   
 
 #TABLE: Account
 |  Account Number  |  Account Type |  Balance                            |  Status | Customer ID     | 
@@ -142,11 +138,6 @@ ER DIAGRAM - BANKING SECTOR
 |--------:| -------- |:-----------------------:| -------------:|
 |0002 | Pune   | 16 chun chowk ,Kedanaha  | 2446413       |
 
-#TABLE: Employee
-| Employee ID |  Employee Name |  Contact Info |  Position |  Salary |  Branch ID |
-|--------------:| -------------------|:----------:| ------:|-------:|-----:|
-| 22121008 |  Lalettan |  8940073646 |  Accountant |  120000 |  0006 |
-| 22212289 |  Kajalesh |  8976543428 |  Cashier |  45000 |  0006 |
 
 #TABLE: Loan
 |  Loan ID  | Loan Type | Loan Amount | Interest Rate | Term | Status | Customer ID |
