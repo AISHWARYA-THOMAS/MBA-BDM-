@@ -109,35 +109,66 @@ Investment Table:
 •	Customer_ID (Foreign Key)
 
 
-ER DIAGRAM - BANKING SECTOR
 
-
-![BDM-CIA1 drawio](https://user-images.githubusercontent.com/125997499/234361295-b839816b-69bd-4c93-b632-0897247b4a0e.png)
-
-
-
-#TABLE: Customer
+#Customer
 | Customer ID  | Customer Name       | Contact Info  | Account Number  |  
 |---------------:|------------------------|:--------------:| --------------------:|
 |  9001             |  Aishwarya Thomas   |  7638926678 |  160022221111    |    
 |  9002             |  Sanskar Gaur            |  8970095674 |  160022221021    |    
 
-#TABLE: Account
+#Account
 |  Account Number  |  Account Type |  Balance                            |  Status | Customer ID     | 
 |---------------------:|-----------------|:----------------------------:|--------:|-----------------:|
 |  160022221024  |  Savings              |  1200456                           |  Open  | 9003     | 
 |  160022221021  |  Mutual               |  78900                               |  Closed | 9008 | 
 
-#TABLE: Transaction
+#Transaction
 |  Transaction ID  |  Transaction Type |  Amount |  Date |  Time |  Location |  Account Number |
 |------------------:| -------------------|:----------:| ------:|-------:|-----------:|---------------------:|
 |  888234             |  Cash |  10000 |  12/01/2023 |  09:22:45 |  Pune |  160022221021 |
 |  888999  |  UPI |  500 |  03/02/2023 |  04:49:48 |  Chennai |  160022221771 |
 
-#TABLE: Branch
+#Branch
 |  Branch ID |  Branch Name |  Address |  Contact Info|
 |--------:| -------- |:-----------------------:| -------------:|
 |0002 | Pune   | 16 chun chowk ,Kedanaha  | 2446413       |
+
+#Employee
+| Employee ID |  Employee Name |  Contact Info |  Position |  Salary |  Branch ID |
+|--------------:| -------------------|:----------:| ------:|-------:|-----:|
+| 22121008 |  Lalettan |  8940073646 |  Accountant |  120000 |  0006 |
+| 22212289 |  Kajalesh |  8976543428 |  Cashier |  45000 |  0006 |
+
+#Loan
+|  Loan ID  | Loan Type | Loan Amount | Interest Rate | Term | Status | Customer ID |
+|-----------:| ----------- |:---------------:| --------------:|-------:|-------:|--------------:|
+|  9166  | Home | 130000| 10% | 48 months | paid | 9002 |
+|  8233  | Gold | 50000 | 15% | 18 months | pending | 9007 |
+
+#Credit
+| Card Number  | Card Type | Credit Limit | Balance | Status | Customer ID |
+|--------------:| -------------------|:----------:| ------:|-------:|-----:|
+| 42222229876006  | Debit | - | 600000 | Active | 9006 |
+| 42222654756786 | Credit | 100000 | Active | 9005 |
+
+#ATM
+| ATM ID | Location | Status | Branch ID |
+| ------:|-------:|-----:|
+|5858 | Swargat 2 | Offline | 0009 |
+| ATM ID | Bandra | Active | 0005 |
+
+#Currency
+| Currency Type  | Exchange Rate | Status |
+|-------:|-----:|-----:|
+| Rupee  | 61.4| Rise |
+| Rupee  | 61.4 | Rise |
+
+#Investment
+|  Investment ID  | Investment Type | Investment Amount | Interest Rate | Term | Status | Customer ID |
+|------------------:| -------------------|:-----------------:|----------:|--------------:|-----------:|---------------------:|
+|  23361  | Bonds | 10000 | 15% | 18 months | Completed | 9026 |
+|  26223  | Fixed Deposit | 10000 | 10% | 48 Months | On-going | 9006 |
+
 
 
 
