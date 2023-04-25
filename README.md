@@ -115,9 +115,7 @@ ER DIAGRAM - BANKING SECTOR
 
 
 
-
-
-# TABLE: Customer
+#TABLE: CUSTOMER
 | Customer ID  | Customer Name       | Contact Info  | Account Number  |  
 |---------------:|------------------------|:--------------:| --------------------:|
 |  9001             |  Aishwarya Thomas   |  7638926678 |  160022221111    |    
