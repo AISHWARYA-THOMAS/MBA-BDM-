@@ -153,7 +153,7 @@ Investment Table:
 
 #ATM
 | ATM ID | Location | Status | Branch ID |
-| ------:|-------:|-----:|
+| ------:|-------:|-----:|---:|
 |5858 | Swargat 2 | Offline | 0009 |
 | ATM ID | Bandra | Active | 0005 |
 
