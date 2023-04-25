@@ -29,8 +29,11 @@ Customer Table:
 
 •	Customer_ID (Primary Key)
 •	Customer_Name
-•	Contact_Info
-•	Account_Number (Foreign Key)
+•	Email ID
+• Phone number
+• DOB
+• Age
+• Account_Number (Foreign Key)
 
 Account Table:
 
@@ -61,7 +64,9 @@ Employee Table:
 
 •	Employee_ID (Primary Key)
 •	Employee_Name
-•	Contact_Info
+•	Address
+• Phone number
+• E-mail ID
 •	Position
 •	Salary
 • Branch_ID (Foreign Key)
