@@ -108,3 +108,11 @@ Investment Table:
 •	Status
 •	Customer_ID (Foreign Key)
 
+
+
+#Customer
+| Customer ID  | Customer Name       | Contact Info  | Account Number  |  
+|---------------:|------------------------|:--------------:| --------------------:|
+|  9001             |  Aishwarya Thomas   |  7638926678 |  160022221111    |    
+|  9002             |  Sanskar Gaur            |  8970095678 |  160022221021    |    
+|  9003             |  Athul Ramana           |  8970095678 |  160022221021    |
