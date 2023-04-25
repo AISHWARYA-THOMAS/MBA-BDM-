@@ -160,13 +160,13 @@ ER DIAGRAM - BANKING SECTOR
 | Card Number  | Card Type | Credit Limit | Balance | Status | Customer ID |
 |--------------:| -------------------|:----------:| ------:|-------:|-----:|
 | 42222229876006  | Debit | - | 600000 | Active | 9006 |
-| 42222654756786 | Credit | 100000 | Active | 9005 |
+| 42222654756786 | Credit | 100000 |10000 | Active | 9005 |
 
 #TABLE: ATM
 | ATM ID | Location | Status | Branch ID |
 | ------:|-------:|-----:|---:|
 |5858 | Swargat 2 | Offline | 0009 |
-| ATM ID | Bandra | Active | 0005 |
+| 5968 | Bandra | Active | 0005 |
 
 #TABLE: Currency
 | Currency Type  | Exchange Rate | Status |
