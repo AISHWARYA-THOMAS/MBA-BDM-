@@ -109,6 +109,9 @@ Investment Table:
 •	Customer_ID (Foreign Key)
 
 
+![BDM-CIA1 drawio](https://user-images.githubusercontent.com/125997499/234361295-b839816b-69bd-4c93-b632-0897247b4a0e.png)
+
+
 
 #Customer
 | Customer ID  | Customer Name       | Contact Info  | Account Number  |  
