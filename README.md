@@ -20,6 +20,7 @@ Customer Table:
 • Phone number
 • DOB
 • Age
+• Address
 • Account_Number
 
 Account Table:
@@ -129,8 +130,8 @@ ER DIAGRAM - BANKING SECTOR
 |  9002             |  Sanskar Gaur            | 22 | 23/12/2000 | 8970095674 | shergaur@gmail.com | 160022221021    |    
 |  9003             |  Athul Ramana           | 24 | 12/10/1998 |  9834558908 | whatsligma009@gmail.com |160022221024     |
 
-# Composite attribute 
-# Multi value Attribute 
+#Composite attribute 
+#Multi value Attribute 
 
 #TABLE: Account
 |  Account Number  |  Account Type |  Balance                            |  Status | Customer ID     | 
@@ -149,8 +150,8 @@ ER DIAGRAM - BANKING SECTOR
 |--------:| -------- |:-----------------------:| -------------:|
 |0002 | Pune   | 16 chun chowk ,Kedanaha  | 2446413       |
 
-# Composite attribute 
-# Multi value Attribute 
+#Composite attribute 
+#Multi value Attribute 
 
 #TABLE: Employee
 | Employee ID |  Employee Name | Phone Number | Address | Email ID |  Position |  Salary |  Branch ID |
@@ -158,8 +159,8 @@ ER DIAGRAM - BANKING SECTOR
 | 22121008 |  Lalettan |  8940073646 | 234 valley st Concuse,Pune | bosslal@gmail.com | Accountant |  120000 |  0006 |
 | 22212289 |  Kajalesh |  8976543428 | 78 Vill View  Lavasa,Pune | kaaaaaj123@gmail.com |  Cashier |  45000 |  0006 |
 
-# Composite attribute 
-# Multi value Attribute 
+#Composite attribute 
+#Multi value Attribute 
 
 #TABLE: Loan
 |  Loan ID  | Loan Type | Loan Amount | Interest Rate | Term | Status | Customer ID |
