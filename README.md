@@ -90,6 +90,7 @@ Currency Table:
 •	Currency_Type 
 •	Exchange_Rate
 •	Status
+•  Transcation_ID
 
 Investment Table:
 
@@ -181,10 +182,10 @@ ER DIAGRAM - BANKING SECTOR
 | 5968 | Bandra | Active | 0005 |
 
 #TABLE: Currency
-| Currency Type  | Exchange Rate | Status |
-|-------:|-----:|-----:|
-| Rupee  | 61.4| Rise |
-| Rupee  | 61.4 | Rise |
+| Currency Type  | Exchange Rate | Status | Transaction_ID |
+|-------:|-----:|-----:|--:|
+| Rupee  | 61.4| Rise |888979 |
+| Rupee  | 61.4 | Rise |888009 |
 
 #TABLE: Investment
 |  Investment ID  | Investment Type | Investment Amount | Interest Rate | Term | Status | Customer ID |
