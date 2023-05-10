@@ -1,0 +1,206 @@
+create database Bank_of_Lavasa;
+use Bank_of_Lavasa;
+
+
+-- Customer table
+
+Create table  Customer (Customer_ID int not null,  Customer_Name varchar(50), Email_ID varchar(25),
+ Phone_No bigint not null , DOB date, Age int(10) , Account_Number bigint not null,
+ primary key (Customer_ID));
+ 
+ select * from customer;
+ALTER TABLE Customer
+ADD Address VARCHAR(100);
+ALTER TABLE `bank_of_lavasa`.`customer` 
+CHANGE COLUMN `Phone_No` `Phone_No` INT not NULL ;
+ALTER TABLE `bank_of_lavasa`.`customer` 
+CHANGE COLUMN `Phone_No` `Phone_No` BIGINT NOT NULL ;
+ALTER TABLE `bank_of_lavasa`.`customer` 
+CHANGE COLUMN `Account_Number` `Account_Number` BIGINT NOT NULL ;
+
+ALTER TABLE `bank_of_lavasa`.`customer` 
+ADD INDEX `Account_Number_idx` (`Account_Number` ASC) VISIBLE;
+ALTER TABLE `bank_of_lavasa`.`customer` 
+ADD CONSTRAINT `Account_Number`
+  FOREIGN KEY (`Account_Number`)
+  REFERENCES `bank_of_lavasa`.`account` (`Account_Number`);
+
+INSERT INTO `bank_of_lavasa`.`customer` (`Customer_ID`, `Customer_Name`, `Email_ID`, `Phone_No`, `DOB`, `Age`, `Account_Number`, `Address`) VALUES ('9001', 'Aishwarya Thomas', 'thomass@gmail.com', '6352541259', '2000-06-08', '22', '160022221111', '154, Kamarajar theru,bangalore main road,bangalore');
+INSERT INTO `bank_of_lavasa`.`customer` (`Customer_ID`, `Customer_Name`, `Email_ID`, `Phone_No`, `DOB`, `Age`, `Account_Number`, `Address`) VALUES ('9002', 'Santhosh Shelby', 'p_key_foo_kin@gmail.com', '8524163578', '2000-10-12', '22', '160022221985', '1011, peaky street, Birmingham');
+INSERT INTO `bank_of_lavasa`.`customer` (`Customer_ID`, `Customer_Name`, `Email_ID`, `Phone_No`, `DOB`, `Age`, `Account_Number`, `Address`) VALUES ('9003', 'Siddharth Malhothra', 'maal_sid@gmail.com', '7844512568', '1999-05-23', '23', '160022221152', '457 VIT road, maal circle, Vellore');
+INSERT INTO `bank_of_lavasa`.`customer` (`Customer_ID`, `Customer_Name`, `Email_ID`, `Phone_No`, `DOB`, `Age`, `Account_Number`, `Address`) VALUES ('9004', 'Sanskar P George', 'excellence_69@gmail.com', '7856458920', '2000-05-22', '22', '160022221241', '69, Nandu Nagar,Noida');
+INSERT INTO `bank_of_lavasa`.`customer` (`Customer_ID`, `Customer_Name`, `Email_ID`, `Phone_No`, `DOB`, `Age`, `Account_Number`, `Address`) VALUES ('9005', 'Athul Singh', 'singh_is_king@gmail.com', '8590424292', '1998-04-04', '25', '160022221104', '10, unsteady Blvd, Tirur');
+INSERT INTO `bank_of_lavasa`.`customer` (`Customer_ID`, `Customer_Name`, `Email_ID`, `Phone_No`, `DOB`, `Age`, `Account_Number`, `Address`) VALUES ('9006', 'Kajal Kumar Jain', 'ulti_kaaaaj@gmail.com', '8565898885', '2001-01-19', '22', '160022221365', '101, Wailing Street, Lucknow');
+INSERT INTO `bank_of_lavasa`.`customer` (`Customer_ID`, `Customer_Name`, `Email_ID`, `Phone_No`, `DOB`, `Age`, `Account_Number`, `Address`) VALUES ('9007', 'Richy Duke', 'duke_the_illest@gmail.com', '8940073625', '1998-10-12', '24', '160022221478', '404, Groove street, San Andreas');
+INSERT INTO `bank_of_lavasa`.`customer` (`Customer_ID`, `Customer_Name`, `Email_ID`, `Phone_No`, `DOB`, `Age`, `Account_Number`, `Address`) VALUES ('9008', 'Tejasuii', 'cr_Suiiii@gmail.com', '8564587895', '2000-07-21', '22', '160022221888', '80, marathalli, desparilla street, Bangalore');
+
+  
+-- Account table
+
+Create table  Account (Account_Number bigint not null,  Account_type varchar(50), Balance bigint, Account_status varchar (12),
+ Customer_ID int not  null ,
+ primary key (Account_Number),
+ foreign key (Customer_ID) references Customer (Customer_ID));
+Select * from Account; 
+INSERT INTO `bank_of_lavasa`.`account` (`Account_Number`, `Account_type`, `Balance`, `Account_status`, `Customer_ID`) VALUES ('160022221104', 'Savings', '1200000', 'Open', '9005');
+INSERT INTO `bank_of_lavasa`.`account` (`Account_Number`, `Account_type`, `Balance`, `Account_status`, `Customer_ID`) VALUES ('160022221111', 'Savings', '5000', 'Open', '9001');
+INSERT INTO `bank_of_lavasa`.`account` (`Account_Number`, `Account_type`, `Balance`, `Account_status`, `Customer_ID`) VALUES ('160022221152', 'Savngs', '200000', 'Open', '9003');
+INSERT INTO `bank_of_lavasa`.`account` (`Account_Number`, `Account_type`, `Balance`, `Account_status`, `Customer_ID`) VALUES ('160022221478', 'Savings', '450000', 'Open', '9007');
+INSERT INTO `bank_of_lavasa`.`account` (`Account_Number`, `Account_type`, `Balance`, `Account_status`, `Customer_ID`) VALUES ('160022221888', 'Joint', '8000000', 'Open', '9008');
+INSERT INTO `bank_of_lavasa`.`account` (`Account_Number`, `Account_type`, `Balance`, `Account_status`, `Customer_ID`) VALUES ('160022221985', 'Joint', '8000000', 'Closed', '9002');
+INSERT INTO `bank_of_lavasa`.`account` (`Account_Number`, `Account_type`, `Balance`, `Account_status`, `Customer_ID`) VALUES ('160022221365', 'Joint', '1000', 'Open', '9006');
+
+
+  
+-- Transaction Table
+Create table  Transaction (Transaction_ID int not null,  Transaction_type varchar(50), Amount bigint,
+ Date date , Time time, Location Varchar(30), Account_Number Bigint ,
+ primary key (Transaction_ID), foreign key (Account_Number) references account (Account_Number));
+INSERT INTO `bank_of_lavasa`.`transaction` (`Transaction_ID`, `Transaction_type`, `Amount`, `Date`, `Time`, `Location`, `Account_Number`) VALUES ('888234', 'Cash', '10000', '2022-10-09', '07:12:19', 'Pune', '160022221111');
+INSERT INTO `bank_of_lavasa`.`transaction` (`Transaction_ID`, `Transaction_type`, `Amount`, `Date`, `Time`, `Location`, `Account_Number`) VALUES ('888232', 'UPI', '89', '2022-05-04', '16:58:01', 'Bangalore', '160022221478');
+INSERT INTO `bank_of_lavasa`.`transaction` (`Transaction_ID`, `Transaction_type`, `Amount`, `Date`, `Time`, `Location`, `Account_Number`) VALUES ('888345', 'Cash', '5000', '2021-08-02', '11:25:44', 'Mumbai', '160022221888');
+INSERT INTO `bank_of_lavasa`.`transaction` (`Transaction_ID`, `Transaction_type`, `Amount`, `Date`, `Time`, `Location`, `Account_Number`) VALUES ('888890', 'UPI', '8990', '2020-08-09', '18:49:12', 'Pune', '160022221985');
+INSERT INTO `bank_of_lavasa`.`transaction` (`Transaction_ID`, `Transaction_type`, `Amount`, `Date`, `Time`, `Location`, `Account_Number`) VALUES ('888789', 'UPI', '199', '2021-07-23', '02:36:08', 'Ooty', '160022221478');
+INSERT INTO `bank_of_lavasa`.`transaction` (`Transaction_ID`, `Transaction_type`, `Amount`, `Date`, `Time`, `Location`, `Account_Number`) VALUES ('888457', 'Cash', '3500', '2019-09-19', '23:09:53', 'Pune', '160022221152');
+INSERT INTO `bank_of_lavasa`.`transaction` (`Transaction_ID`, `Transaction_type`, `Amount`, `Date`, `Time`, `Location`, `Account_Number`) VALUES ('888090', 'UPI', '1200', '2022-09-10', '05:41:16', 'Mumbai', '160022221478');
+INSERT INTO `bank_of_lavasa`.`transaction` (`Transaction_ID`, `Transaction_type`, `Amount`, `Date`, `Time`, `Location`, `Account_Number`) VALUES ('888900', 'UPI', '10000', '2022-11-18', '09:18:37', 'Bangalore', '160022221152');
+INSERT INTO `bank_of_lavasa`.`transaction` (`Transaction_ID`, `Transaction_type`, `Amount`, `Date`, `Time`, `Location`, `Account_Number`) VALUES ('888223', 'UPI', '580', '2022-03-12', '13:47:22', 'Ooty', '160022221104');
+INSERT INTO `bank_of_lavasa`.`transaction` (`Transaction_ID`, `Transaction_type`, `Amount`, `Date`, `Time`, `Location`, `Account_Number`) VALUES ('888343', 'Cash', '8000', '2005-09-10', '21:33:55', 'Pune', '160022221478');
+
+-- branch
+Create table Branch (Branch_ID Int(4), Branch_Name Varchar(30), Address Varchar(50), Contact_info varchar(50), 
+primary key(Branch_ID));
+INSERT INTO `bank_of_lavasa`.`branch` (`Branch_ID`, `Branch_Name`, `Address`, `Contact_info`) VALUES ('0001', 'PUNE', '37, Prabhat Road, Erandwane, Pune, Maharashtra', '2446413');
+INSERT INTO `bank_of_lavasa`.`branch` (`Branch_ID`, `Branch_Name`, `Address`, `Contact_info`) VALUES ('0002', 'MUMBAI', '14, Shanti Niketan, Sion, Mumbai, Maharashtra', '2443654');
+INSERT INTO `bank_of_lavasa`.`branch` (`Branch_ID`, `Branch_Name`, `Address`, `Contact_info`) VALUES ('0003', 'BANGALORE', '21, 5th Cross Road, Indiranagar, Bangalore, Karnataka', '2440987');
+INSERT INTO `bank_of_lavasa`.`branch` (`Branch_ID`, `Branch_Name`, `Address`, `Contact_info`) VALUES ('0004', 'OOTY', '6, Lake Road, Fern Hill, Ooty, Tamil Nadu', '2434567');
+UPDATE `bank_of_lavasa`.`branch` SET `Branch_ID` = '1001' WHERE (`Branch_ID` = '1');
+UPDATE `bank_of_lavasa`.`branch` SET `Branch_ID` = '1002' WHERE (`Branch_ID` = '2');
+UPDATE `bank_of_lavasa`.`branch` SET `Branch_ID` = '1004' WHERE (`Branch_ID` = '4');
+INSERT INTO `bank_of_lavasa`.`branch` (`Branch_ID`, `Branch_Name`, `Address`, `Contact_info`) VALUES ('1003', 'BANGALORE', '21, 5th Cross Road, Indiranagar, Bangalore, Karnataka', '2443322');
+ALTER TABLE `bank_of_lavasa`.`branch` 
+CHANGE COLUMN `Address` `Address` VARCHAR(60) NULL DEFAULT NULL ;
+
+-- Employee
+Create table Employee(Employee_ID bigint not null, Employee_Name varchar(20), 
+Phone_Number bigint not null, Address varchar (50), Email_ID varchar(30),Position Varchar (20), Salary int not null,Branch_ID Int(4),
+primary key(Employee_ID), foreign key (Branch_ID) references Branch (Branch_ID)  );
+
+ALTER TABLE `bank_of_lavasa`.`employee` 
+CHANGE COLUMN `Position` `Position` VARCHAR(40) NULL DEFAULT NULL ;
+
+INSERT INTO `bank_of_lavasa`.`employee` ( `Employee_ID`, `Employee_Name`, `Phone_Number`, `Address`, `Email_ID`, `Position`, `Salary`, `Branch_ID` ) 
+VALUES ('22121039', 'Anjali Gupta', '9876543210', '123 ABC Apartments, Andheri West, Mumbai', 'anjali.gupta@gmail.com', 'Manager', '150000', '1001'), 
+('22121040', 'Rahul Sharma', '9876543211', '321 XYZ Society, Malad East, Mumbai', 'rahul.sharma@gmail.com', 'Customer Service Representative', '50000', '1001'), 
+('22121041', 'Aniket Deshpande', '9876543212', '789 PQR Nagar, Hadapsar, Pune', 'aniket.deshpande@gmail.com', 'Accountant', '100000', '1002'), 
+('22121042', 'Shreya Patil', '9876543213', '456 DEF Road, Kothrud, Pune', 'shreya.patil@gmail.com', 'Teller', '60000', '1002'), 
+('22121043', 'Siddharth Singh', '9876543214', '234 GHI Apartments, Kandivali West, Mumbai', 'siddharth.singh@gmail.com', 'Manager', '120000', '1001'), 
+('22121044', 'Priya Desai', '9876543215', '567 JKL Society, Koregaon Park, Pune', 'priya.desai@gmail.com', 'Customer Service Representative', '55000', '1002'), 
+('22121045', 'Rajat Kumar', '9876543216', '789 MNO Nagar, Wakad, Pune', 'rajat.kumar@gmail.com', 'Teller', '70000', '1003'), 
+('22121046', 'Tanvi Shah', '9876543217', '456 PQR Apartments, Vile Parle East, Mumbai', 'tanvi.shah@gmail.com', 'Manager', '130000', '1001'), 
+('22121047', 'Vishal Dubey', '9876543218', '321 STU Society, Aundh, Pune', 'vishal.dubey@gmail.com', 'Accountant', '95000', '1003'), 
+('22121048', 'Riya Singh', '9876543219', '123 VWX Road, Goregaon East, Mumbai', 'riya.singh@gmail.com', 'Customer Service Representative', '60000', '1001');
+INSERT INTO bank_of_lavasa.employee ( Employee_ID, Employee_Name, Phone_Number, Address, Email_ID, Position, Salary, Branch_ID ) VALUES 
+('22121049', 'Saurabh Patel', '9876543220', '567 YZA Apartments, Khar West, Mumbai', 'saurabh.patel@gmail.com', 'Teller', '65000', '1004'),
+ ('22121050', 'Nikhil Mehta', '9876543221', '234 BCD Road, Shivaji Nagar, Pune', 'nikhil.mehta@gmail.com', 'Manager', '140000', '1004'),
+ ('22121051', 'Simran Kaur', '9876543222', '789 EFG Society, Baner, Pune', 'simran.kaur@gmail.com', 'Customer Service Representative', '60000', '1004'),
+ ('22121052', 'Kunal Shah', '9876543223', '123 HIJ Apartments, Andheri East, Mumbai', 'kunal.shah@gmail.com', 'Accountant', '105000', '1003'),
+ ('22121053', 'Amitabh Das', '9876543224', '321 KLM Nagar, Magarpatta, Pune', 'amitabh.das@gmail.com', 'Teller', '68000', '1002');
+
+-- Loan (Alter table for rupees)
+create table Loan(Loan_ID int not null, Loan_type varchar (15), Loan_Amount bigint not null, 
+Interest_Rate varchar (5), Term varchar (10), Status varchar (8), Customer_ID int (4),
+ primary key (Loan_ID), Foreign key (Customer_ID) references Customer (Customer_ID));
+ 
+ INSERT INTO `bank_of_lavasa`.`loan` (`Loan_ID`, `Loan_type`, `Loan_Amount`, `Interest_Rate`, `Term`, `Status`, `Customer_ID`) VALUES ('1245', 'Home', '800000', '16', '26', 'Active', '9005');
+INSERT INTO `bank_of_lavasa`.`loan` (`Loan_ID`, `Loan_type`, `Loan_Amount`, `Interest_Rate`, `Term`, `Status`, `Customer_ID`) VALUES ('1266', 'Home', '500000', '16', '26', 'Active', '9008');
+INSERT INTO `bank_of_lavasa`.`loan` (`Loan_ID`, `Loan_type`, `Loan_Amount`, `Interest_Rate`, `Term`, `Status`, `Customer_ID`) VALUES ('1254', 'Personal', '60000', '15', '18', 'Infunding', '9007');
+INSERT INTO `bank_of_lavasa`.`loan` (`Loan_ID`, `Loan_type`, `Loan_Amount`, `Interest_Rate`, `Term`, `Status`, `Customer_ID`) VALUES ('1222', 'Gold', '45000', '12', '12', 'Active', '9003');
+INSERT INTO `bank_of_lavasa`.`loan` (`Loan_ID`, `Loan_type`, `Loan_Amount`, `Interest_Rate`, `Term`, `Status`, `Customer_ID`) VALUES ('1211', 'Vehicle', '900000', '13', '36', 'Infunding', '9002');
+INSERT INTO `bank_of_lavasa`.`loan` (`Loan_ID`, `Loan_type`, `Loan_Amount`, `Interest_Rate`, `Term`, `Status`, `Customer_ID`) VALUES ('1236', 'Vehicle', '400000', '13', '36', 'Active', '9001');
+INSERT INTO `bank_of_lavasa`.`loan` (`Loan_ID`, `Loan_type`, `Loan_Amount`, `Interest_Rate`, `Term`, `Status`, `Customer_ID`) VALUES ('1289', 'Home', '800000', '16', '36', 'Active', '9001');
+INSERT INTO `bank_of_lavasa`.`loan` (`Loan_ID`, `Loan_type`, `Loan_Amount`, `Interest_Rate`, `Term`, `Status`, `Customer_ID`) VALUES ('1200', 'Personal', '80000', '15', '12', 'Active', '9003');
+INSERT INTO `bank_of_lavasa`.`loan` (`Loan_ID`, `Loan_type`, `Loan_Amount`, `Interest_Rate`, `Term`, `Status`, `Customer_ID`) VALUES ('1275', 'Gold', '75000', '12', '18', 'Closed', '9004');
+INSERT INTO `bank_of_lavasa`.`loan` (`Loan_ID`, `Loan_type`, `Loan_Amount`, `Interest_Rate`, `Term`, `Status`, `Customer_ID`) VALUES ('1269', 'Personal', '50000', '15', '18', 'Infunding', '9006');
+
+
+-- Credit (alter table for rupees)
+Create table Credit (Card_number bigint not null,Card_Type varchar(8),Credit_Limit bigint,
+Balance bigint, Status varchar(8), Customer_ID int(5), 
+primary key (Card_Number), Foreign key (Customer_ID) references Customer (Customer_ID));
+
+INSERT INTO Credit (Card_number, Card_Type, Credit_Limit, Balance, Status, Customer_ID)VALUES (42222229876006, 'Debit', null, 600000, 'Active', 9003);
+INSERT INTO Credit (Card_number, Card_Type, Credit_Limit, Balance, Status, Customer_ID)VALUES (42222229876007, 'Credit', 1000000, 250000, 'Active', 9004);
+INSERT INTO Credit (Card_number, Card_Type, Credit_Limit, Balance, Status, Customer_ID)VALUES (42222229876008, 'Credit', 500000, 10000, 'Active', 9008);
+INSERT INTO Credit (Card_number, Card_Type, Credit_Limit, Balance, Status, Customer_ID)VALUES (42222229876009, 'Debit', null, 70000, 'Active', 9007);
+INSERT INTO Credit (Card_number, Card_Type, Credit_Limit, Balance, Status, Customer_ID)VALUES (42222229876010, 'Credit', 250000, 0, 'Inactive', 9001);
+INSERT INTO Credit (Card_number, Card_Type, Credit_Limit, Balance, Status, Customer_ID)VALUES (42222229876011, 'Debit', null, 15000, 'Active', 9004);
+INSERT INTO Credit (Card_number, Card_Type, Credit_Limit, Balance, Status, Customer_ID)VALUES (42222229876012, 'Credit', 500000, 125000, 'Active', 9002);
+INSERT INTO Credit (Card_number, Card_Type, Credit_Limit, Balance, Status, Customer_ID)VALUES (42222229876013, 'Debit', null, 75000, 'Inactive', 9006);
+INSERT INTO Credit (Card_number, Card_Type, Credit_Limit, Balance, Status, Customer_ID)VALUES (42222229876014, 'Credit', 750000, 5000, 'Active', 9005);
+INSERT INTO Credit (Card_number, Card_Type, Credit_Limit, Balance, Status, Customer_ID)VALUES (42222229876015, 'Debit', null, 250000, 'Active', 9006);
+
+  
+-- ATM
+Create Table ATM(ATM_ID int(4),Location varchar(15), Status varchar (8), Branch_ID int(4), 
+PRIMARY KEY (ATM_ID), foreign key (Branch_ID) references Branch (Branch_ID));
+
+
+INSERT INTO atm (ATM_ID, Location, Status, Branch_ID) VALUES ('5551', 'PUNE STATION', 'ACTIVE', '1001');
+INSERT INTO atm (ATM_ID, Location, Status, Branch_ID) VALUES ('5552', 'MUMBAI CENTRAL', 'INACTIVE', '1002');
+INSERT INTO atm (ATM_ID, Location, Status, Branch_ID) VALUES ('5553', 'BANGALORE AIRPORT', 'ACTIVE', '1003');
+INSERT INTO atm (ATM_ID, Location, Status, Branch_ID) VALUES ('5554', 'OOTY BUS STAND', 'ACTIVE', '1004');
+INSERT INTO atm (ATM_ID, Location, Status, Branch_ID) VALUES ('5555', 'PUNE UNIVERSITY', 'INACTIVE', '1001');
+INSERT INTO atm (ATM_ID, Location, Status, Branch_ID) VALUES ('5556', 'MUMBAI AIRPORT', 'ACTIVE', '1002');
+INSERT INTO atm (ATM_ID, Location, Status, Branch_ID) VALUES ('5557', 'BANGALORE STATION', 'ACTIVE', '1003');
+INSERT INTO atm (ATM_ID, Location, Status, Branch_ID) VALUES ('5558', 'OOTY LAKE', 'ACTIVE', '1004');
+
+-- Currency
+Create Table Currency(Currency_Type varchar(15), Exchange_Rate varchar(6), Status varchar(8), 
+Transaction_ID int not null ,
+Foreign key (Transaction_ID ) references transaction(Transaction_ID ));
+
+INSERT INTO Currency (Currency_Type, Exchange_Rate, Status, Transaction_ID)VALUES ('INR', '1.00', 'Active', '888234');
+INSERT INTO Currency (Currency_Type, Exchange_Rate, Status, Transaction_ID)VALUES ('INR', '1.00', 'Active', '888232');
+INSERT INTO Currency (Currency_Type, Exchange_Rate, Status, Transaction_ID)VALUES ('INR', '1.00', 'Active', '888345');
+INSERT INTO Currency (Currency_Type, Exchange_Rate, Status, Transaction_ID)VALUES ('INR', '1.00', 'Active', '888890');
+INSERT INTO Currency (Currency_Type, Exchange_Rate, Status, Transaction_ID)VALUES ('INR', '1.00', 'Active', '888789');
+INSERT INTO Currency (Currency_Type, Exchange_Rate, Status, Transaction_ID)VALUES ('INR', '1.00', 'Active', '888457');
+INSERT INTO Currency (Currency_Type, Exchange_Rate, Status, Transaction_ID)VALUES ('INR', '1.00', 'Active', '888090');
+INSERT INTO Currency (Currency_Type, Exchange_Rate, Status, Transaction_ID)VALUES ('INR', '1.00', 'Active', '888223');
+
+
+-- Investment 
+Create Table Investment(Investment_ID int(5),Investment_Type varchar(20),Investment_Amount int (9),
+ Interest_Rate varchar(5), Term Varchar (8),Status varchar(10),Customer_ID int (4),
+ primary key (Investment_ID), Foreign key (Customer_ID) references Customer (Customer_ID));
+ 
+ 
+ INSERT INTO Investment (Investment_ID, Investment_Type, Investment_Amount, Interest_Rate, Term, Status, Customer_ID)
+VALUES (10001, 'Mutual Fund', 50000, '12%', '1 year', 'Active', 9001);
+INSERT INTO Investment (Investment_ID, Investment_Type, Investment_Amount, Interest_Rate, Term, Status, Customer_ID)
+VALUES (10002, 'Fixed Deposit', 100000, '8%', '5 years', 'Active', 9002);
+INSERT INTO Investment (Investment_ID, Investment_Type, Investment_Amount, Interest_Rate, Term, Status, Customer_ID)
+VALUES (10003, 'Stocks', 75000, '15%', '2 years', 'Active', 9003);
+INSERT INTO Investment (Investment_ID, Investment_Type, Investment_Amount, Interest_Rate, Term, Status, Customer_ID)
+VALUES (10004, 'Bonds', 200000, '6%', '3 years', 'Active', 9004);
+INSERT INTO Investment (Investment_ID, Investment_Type, Investment_Amount, Interest_Rate, Term, Status, Customer_ID)
+VALUES (10005, 'Mutual Fund', 100000, '10%', '1 year', 'Active', 9005);
+INSERT INTO Investment (Investment_ID, Investment_Type, Investment_Amount, Interest_Rate, Term, Status, Customer_ID)
+VALUES (10006, 'Fixed Deposit', 50000, '7%', '2 years', 'Active', 9006);
+INSERT INTO Investment (Investment_ID, Investment_Type, Investment_Amount, Interest_Rate, Term, Status, Customer_ID)
+VALUES (10007, 'Stocks', 150000, '20%', '4 years', 'Active', 9007);
+INSERT INTO Investment (Investment_ID, Investment_Type, Investment_Amount, Interest_Rate, Term, Status, Customer_ID)
+VALUES (10008, 'Bonds', 100000, '5%', '5 years', 'Active', 9008);
+INSERT INTO Investment (Investment_ID, Investment_Type, Investment_Amount, Interest_Rate, Term, Status, Customer_ID)
+VALUES (10009, 'Mutual Fund', 250000, '12%', '3 years', 'Active', 9001);
+INSERT INTO Investment (Investment_ID, Investment_Type, Investment_Amount, Interest_Rate, Term, Status, Customer_ID)
+VALUES (10010, 'Fixed Deposit', 150000, '8%', '4 years', 'Active', 9002);
+INSERT INTO Investment (Investment_ID, Investment_Type, Investment_Amount, Interest_Rate, Term, Status, Customer_ID)
+VALUES (10011, 'Stocks', 100000, '18%', '2 years', 'Active', 9003);
+INSERT INTO Investment (Investment_ID, Investment_Type, Investment_Amount, Interest_Rate, Term, Status, Customer_ID)
+VALUES (10012, 'Bonds', 50000, '4%', '1 year', 'Active', 9004);
+
+
+
+
