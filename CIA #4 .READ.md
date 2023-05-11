@@ -1,11 +1,6 @@
+
+
 ![image](https://github.com/AISHWARYA-THOMAS/MBA-BDM-/assets/125996803/5998a939-55db-4b21-b0d9-4901c74320f2)
-Customer_ID	Customer_Name	Account_Number	Balance
-9005	Athul Singh	160022221104	1200000
-9001	Aishwarya Thomas	160022221111	50000
-9003	Siddharth Malhothra	160022221152	200000
-9004	Sanskar P George	160022221245	15000
-9006	Kajal Kumar Jain	160022221365	40000
-9007	Richy Duke	160022221478	450000
-9008	Tejasuii	160022221888	50000
-9002	Santhosh Shelby	160022221985	800000
+							
+1. Retrieve the names and account numbers of all customers who have an account in the Bank
 ![image](https://github.com/AISHWARYA-THOMAS/MBA-BDM-/assets/125996803/cd08e416-58f0-481a-aa8b-f7e84b452c8e)
