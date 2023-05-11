@@ -1,5 +1,8 @@
 Problem statement:
-The objective is to design a database structure for a banking application that can handle enormous amounts of data securely and efficiently, while also providing a smooth experience with accurate and timely information to customers. By inserting the required amount of data into these tables and you identify and formulate problem statements that may arise. Then use SQL commands to solve these problems and create a presentation to showcase the database structure, solutions to the identified problems, and the results in a tabular form with visualization through graphs and charts. The ultimate goal is to provide a robust and reliable database system that ensures efficient processing, secure storage, and smooth customer experience.
+The objective is to design a database structure for a banking application that can handle enormous amounts of data securely and efficiently, 
+while also providing a smooth experience with accurate and timely information to customers. By inserting the required amount of data into these tables and you identify and formulate problem statements that may arise. 
+Then use SQL commands to solve these problems and create a presentation to showcase the database structure, solutions to the identified problems, and the results in a tabular form with visualization through graphs and charts. 
+The ultimate goal is to provide a robust and reliable database system that ensures efficient processing, secure storage, and smooth customer experience.
 
 create database Bank_of_Lavasa;
 use Bank_of_Lavasa;
