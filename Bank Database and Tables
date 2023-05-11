@@ -113,7 +113,7 @@ INSERT INTO bank_of_lavasa.employee ( Employee_ID, Employee_Name, Phone_Number, 
  ('22121052', 'Kunal Shah', '9876543223', '123 HIJ Apartments, Andheri East, Mumbai', 'kunal.shah@gmail.com', 'Accountant', '105000', '1003'),
  ('22121053', 'Amitabh Das', '9876543224', '321 KLM Nagar, Magarpatta, Pune', 'amitabh.das@gmail.com', 'Teller', '68000', '1002');
 
--- Loan (Alter table for rupees)
+-- Loan 
 create table Loan(Loan_ID int not null, Loan_type varchar (15), Loan_Amount bigint not null, 
 Interest_Rate varchar (5), Term varchar (10), Status varchar (8), Customer_ID int (4),
  primary key (Loan_ID), Foreign key (Customer_ID) references Customer (Customer_ID));
@@ -130,7 +130,7 @@ INSERT INTO `bank_of_lavasa`.`loan` (`Loan_ID`, `Loan_type`, `Loan_Amount`, `Int
 INSERT INTO `bank_of_lavasa`.`loan` (`Loan_ID`, `Loan_type`, `Loan_Amount`, `Interest_Rate`, `Term`, `Status`, `Customer_ID`) VALUES ('1269', 'Personal', '50000', '15', '18', 'Infunding', '9006');
 
 
--- Credit (alter table for rupees)
+-- Credit 
 Create table Credit (Card_number bigint not null,Card_Type varchar(8),Credit_Limit bigint,
 Balance bigint, Status varchar(8), Customer_ID int(5), 
 primary key (Card_Number), Foreign key (Customer_ID) references Customer (Customer_ID));
